@@ -133,7 +133,7 @@ brew install zopfli
 brew install caskroom/cask/brew-cask
 
 # Core casks
-brew cask install --appdir="/Applications" alfred
+brew cask install --appdir="/Applications" quicksilver
 brew cask install --appdir="/Applications" iterm2
 brew cask install --appdir="/Applications" java
 brew cask install --appdir="/Applications" android-studio
@@ -166,12 +166,17 @@ brew cask install --appdir="/Applications" adium
 brew cask install --appdir="/Applications" appcleaner
 
 # Link cask apps to Alfred
-brew cask alfred link
+# brew cask alfred link
 
 # Install Docker, which requires virtualbox
 brew install docker
 brew install boot2docker
 brew install docker-compose
+
+# Install FunctionFlip for Fn key flipping
+wget http://kevingessner.com/public/downloads/FunctionFlip/2.2.3/FunctionFlip.prefPane.zip
+unzip FunctionFlip.prefPane.zip
+mv FunctionFlip.prefPane ~/Library/${USER}/Library/PreferencesPanes/
 
 # Remove outdated versions from the cellar.
 brew cleanup

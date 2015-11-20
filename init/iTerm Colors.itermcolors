@@ -149,11 +149,11 @@
 	<key>Background Color</key>
 	<dict>
 		<key>Blue Component</key>
-		<real>0.083321548998355865</real>
+		<real>0.10980392156862745</real>
 		<key>Green Component</key>
-		<real>0.067220613360404968</real>
+		<real>0.086274509803921567</real>
 		<key>Red Component</key>
-		<real>0.060000188648700714</real>
+		<real>0.074509803921568626</real>
 	</dict>
 	<key>Bold Color</key>
 	<dict>
