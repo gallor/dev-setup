@@ -70,6 +70,7 @@ brew install ant
 brew install go
 brew install gradle
 
+
 # Install font tools.
 # brew tap bramstein/webfonttools
 # brew install sfnt2woff
@@ -133,11 +134,23 @@ brew install zopfli
 brew install caskroom/cask/brew-cask
 
 # Core casks
-brew cask install --appdir="/Applications" quicksilver
+# brew cask install --appdir="/Applications" quicksilver
+brew cask install --appdir="/Applications" bettertouchtool
 brew cask install --appdir="/Applications" iterm2
 brew cask install --appdir="/Applications" java
 brew cask install --appdir="/Applications" android-studio
 
+# Install QuickLook tools
+brew cask install qlcolorcode # Preview source code files with syntax highlighting
+brew cask install qlstephen # Preview plain text files without a file extension. Example: README, CHANGELOG, etc.
+brew cask install qlmarkdown # Preview Markdown files
+brew cask install quicklook-json # Preview JSON files
+brew cask install qlprettypatch # Preview .patch files
+brew cask install quicklook-csv # Preview CSV files
+brew cask install betterzipql # Preview archives
+brew cask install qlimagesize # Preview image size and dimensions
+brew cask install webpquicklook # Preview Webp images
+brew cask install suspicious-package # Preview contents of a standard Apple installer package
 
 # Development tool casks
 brew cask install --appdir="/Applications" sublime-text
