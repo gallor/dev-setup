@@ -16,8 +16,10 @@ function runDots() {
             echo "Syncing the dev-setup and dotfiles repo to your local machine."
             echo "------------------------------"
             echo ""
-            cd ~ && curl -#L https://github.com/gallor/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
-            curl -#L https://github.com/gallor/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
+            cd ~ && curl -#L https://github.com/gallor/dev-setup/tarball/master | tar -xzv
+			--strip-components 1 --exclude={README.md,LICENSE,CREDITS.md}
+            curl -#L https://github.com/gallor/dotfiles/tarball/master | tar -xzv
+			--strip-components 1 --exclude={README.md,LICENSE,CREDITS.md}
         fi
         if [ $ARG == "osxprep" ] || [ $ARG == "all" ]; then
             # Run the osxprep.sh Script

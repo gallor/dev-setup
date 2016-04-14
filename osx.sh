@@ -794,6 +794,11 @@ cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ 
 # defaults write com.twitter.twitter-mac HideInBackground -bool true
 
 ###############################################################################
+# Misc Operations                                                             #
+###############################################################################
+wget -P ~/Desktop http://www.rubicode.com/Downloads/RCDefaultApp-2.1.X.dmg
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 

@@ -50,7 +50,7 @@ brew install wget --with-iri
 # Install RingoJS and Narwhal.
 # Note that the order in which these are installed is important;
 # see http://git.io/brew-narwhal-ringo.
-# brew install ringojs
+# brew install ringojs # Ringo is a JavaScript platform built on the JVM and optimized for server-side applications
 # brew install narwhal
 
 # Install Python
@@ -69,76 +69,54 @@ brew install maven
 brew install ant
 brew install go
 brew install gradle
+brew install ruby
 
-
-# Install font tools.
+# Install Web font tools.
 # brew tap bramstein/webfonttools
 # brew install sfnt2woff
 # brew install sfnt2woff-zopfli
 # brew install woff2
 
-# Install some CTF tools; see https://github.com/ctfs/write-ups.
-#brew install aircrack-ng
-#brew install bfg
-#brew install binutils
-#brew install binwalk
-#brew install cifer
-#brew install dex2jar
-#brew install dns2tcp
-#brew install fcrackzip
-#brew install foremost
-#brew install hashpump
-#brew install hydra
-#brew install john
-#brew install knock
-#brew install netpbm
-#brew install nmap
-#brew install pngcheck
-#brew install socat
-#brew install sqlmap
-#brew install tcpflow
-#brew install tcpreplay
-#brew install tcptrace
-#brew install ucspi-tcp # `tcpserver` etc.
-#brew install xpdf
-#brew install xz
-
 # Install other useful binaries.
-brew install ack
-brew install dark-mode
-#brew install exiv2
+brew install ack # Text search tool akin to grep
+brew install tree # directory structure print out
+brew install htop-osx # top with extra functionality
+brew install dark-mode # Toggle the OS X Dark Mode from the command-line
 brew install git
-brew install git-lfs
-brew install git-flow
-brew install imagemagick --with-webp
-#brew install lua
-#brew install lynx
-brew install p7zip
-brew install pigz
-brew install pv
-brew install rename
-brew install rhino
-#brew install speedtest_cli
-brew install ssh-copy-id
-brew install trash
-brew install tree
-brew install webkit2png
-brew install youtube-dl
-brew install zopfli
+brew install git-lfs # Git Large File Storage
+brew install git-flow # Automate git branching workflow
+brew install imagemagick --with-webp # Image editing
+brew install ssh-copy-id # install your public key in a remote machine's authorized_keys
+brew install trash # remove file to trash instead of delete
+brew install webkit2png # Creates screenshots of webpages
+brew install youtube-dl # youtube downloader
+brew install exiv2 # image metadata library and tools
+brew install jenv # Java environment manager
+# brew install lua # Powerful, fast, lightweight, embeddable scripting language
+# brew install lynx # Terminal based web browser
+# brew install p7zip
+# brew install pigz 
+# brew install pv # monitor process of data through a pipeline
+# brew install rename # Perl based rename functionality
+# brew install rhino # JavaScript written entirely in Java
 
 # Install Heroku
 #brew install heroku-toolbelt
 #heroku update
 
+# Apps
+brew install dash # Docs
+
 # Install Cask
 brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
 
 # Core casks
-# brew cask install --appdir="/Applications" quicksilver
 brew cask install --appdir="/Applications" bettertouchtool
 brew cask install --appdir="/Applications" iterm2
-brew cask install --appdir="/Applications" java
 brew cask install --appdir="/Applications" android-studio
+brew cask install java7
+brew cask install java
 
 # Install QuickLook tools
 brew cask install qlcolorcode # Preview source code files with syntax highlighting
@@ -157,10 +135,12 @@ brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" intellij-idea
-brew cask install --appdir="/Applications" eclipse-java
+brew cask install --appdir="/Applications" eclipse-jee
 brew cask install --appdir="/Applications" github-desktop 
 brew cask install --appdir="/Applications" jd-gui 
 brew cask install --appdir="/Applications" webstorm 
+brew cask install --appdir="/Applications" diffmerge
+brew cask install --appdir="/Applications" android-studio
 #brew cask install --appdir="/Applications" heroku-toolbelt
 
 # Misc casks
@@ -170,26 +150,27 @@ brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" dropbox
 brew cask install --appdir="/Applications" keka
-brew cask install --appdir="/Applications" monotype-skyfonts
 brew cask install --appdir="/Applications" google-drive
 brew cask install --appdir="/Applications" caffeine 
-brew cask install --appdir="/Applications" chromecast
 brew cask install --appdir="/Applications" spotify
 brew cask install --appdir="/Applications" adium
 brew cask install --appdir="/Applications" appcleaner
-
-# Link cask apps to Alfred
-# brew cask alfred link
+brew cask install --appdir="/Applications" noizio
+brew cask install --appdir="/Applications" calibre
+brew cask install --appdir="/Applications" monosnap
+brew cask install --appdir="/Applications" evernote
+brew cask install --appdir="/Applications" diffmerge
+brew cask install --appdir="/Applications" flux
+brew cask install --appdir="/Applications" google-photos-backup
+brew cask install --appdir="/Applications" handbrake
+brew cask install --appdir="/Applications" mpeg-streamclip
+brew cask install --appdir="/Applications" sketchup
+brew cask install functionflip
 
 # Install Docker, which requires virtualbox
-brew install docker
-brew install boot2docker
-brew install docker-compose
-
-# Install FunctionFlip for Fn key flipping
-wget http://kevingessner.com/public/downloads/FunctionFlip/2.2.3/FunctionFlip.prefPane.zip
-unzip FunctionFlip.prefPane.zip
-mv FunctionFlip.prefPane ~/Library/${USER}/Library/PreferencesPanes/
+# brew install docker
+# brew install boot2docker
+# brew install docker-compose
 
 # Remove outdated versions from the cellar.
 brew cleanup

@@ -44,7 +44,6 @@ This repo takes a more **light-weight** approach to automation using a combinati
 
 **Scripts tested on OS X 10.10 Yosemite.**
 
-* [Single Setup Script](#single-setup-script)
 * [bootstrap.sh script](#bootstrapsh-script)
     * Syncs dev-setup to your local home directory `~`
 * [osxprep.sh script](#osxprepsh-script)
@@ -66,15 +65,12 @@ This repo takes a more **light-weight** approach to automation using a combinati
 
 ## Section 2: General Apps and Tools
 
-* [Sublime Text](#sublime-text)
-* [Atom](#atom)
 * [Terminal Customization](#terminal-customization)
 * [iTerm2](#iterm2)
 * [Vim](#vim)
 * [Git](#git)
 * [VirtualBox](#virtualbox)
 * [Vagrant](#vagrant)
-* [Docker](#docker)
 * [Homebrew](#homebrew)
 * [Ruby and RVM](#ruby-and-rvm)
 * [Python](#python)
@@ -131,6 +127,7 @@ This repo takes a more **light-weight** approach to automation using a combinati
 * [Android SDK](#android-sdk)
 * [Android Studio](#android-studio)
 * [IntelliJ IDEA](#intellij-idea)
+* [Eclipse EE](#eclipse-ee)
 
 ## Section 8: Misc
 
@@ -1835,29 +1832,24 @@ If you prefer to install it separately, you can download it [here](https://www.j
 
 ### Contributions
 
-Bug reports, suggestions, and pull requests are [welcome](https://github.com/donnemartin/dev-setup/issues)!
+Bug reports, suggestions, and pull requests are [welcome](https://github.com/grantallor/dev-setup/issues)!
 
 ### Credits
 
-See the [Credits Page](https://github.com/donnemartin/dev-setup/blob/master/CREDITS.md).
+See the [Credits Page](https://github.com/grantallor/dev-setup/blob/master/CREDITS.md).
 
 ## Contact Info
 
 Feel free to contact me to discuss any issues, questions, or comments.
 
-* Email: [donne.martin@gmail.com](mailto:donne.martin@gmail.com)
-* Twitter: [@donne_martin](https://twitter.com/donne_martin)
-* GitHub: [donnemartin](https://github.com/donnemartin)
-* LinkedIn: [donnemartin](https://www.linkedin.com/in/donnemartin)
-* Website: [donnemartin.com](http://donnemartin.com)
 
 ### License
 
-This repository contains a variety of content; some developed by Donne Martin, and some from third-parties.  The third-party content is distributed under the license provided by those parties.
+This repository contains a variety of content; Forked from a branch by Donne Martin. The third-party content is distributed under the license provided by those parties.
 
-The content developed by Donne Martin is distributed under the following license:
+The content developed by Grant Allor is distributed under the following license:
 
-    Copyright 2015 Donne Martin
+    Copyright 2015 Grant Allor
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

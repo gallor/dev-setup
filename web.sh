@@ -24,7 +24,7 @@ brew install node
 npm install -g grunt-cli
 npm install -g jshint
 npm install -g less
-npm install -g deployd
+# npm install -g deployd
 
 # Remove outdated versions from the cellar.
 brew cleanup
@@ -36,3 +36,15 @@ gem update --system
 gem install compass
 gem install sass
 gem install json
+
+# Install Development Fonts
+
+if test ! $(which git); then
+  echo "Installing Git..."
+  brew install git
+  git clone https://github.com/andreberg/Meslo-Font.git ~/Desktop/Meslo-Font
+fi	
+
+wget -P ~/Desktop https://github.com/google/fonts/blob/master/ofl/inconsolata/Inconsolata-Bold.ttf?raw=true
+wget -P ~/Destkop https://github.com/google/fonts/blob/master/ofl/inconsolata/Inconsolata-Regular.ttf?raw=true
+wget -P ~/Desktop https://github.com/powerline/fonts/blob/master/Inconsolata-g/Inconsolata-g%20for%20Powerline.otf?raw=true
