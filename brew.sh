@@ -64,12 +64,6 @@ brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 brew install homebrew/php/php55 --with-gmp
 
-# Install Dev Tools
-brew install maven
-brew install ant
-brew install go
-brew install gradle
-brew install ruby
 
 # Install Web font tools.
 # brew tap bramstein/webfonttools
@@ -91,7 +85,8 @@ brew install trash # remove file to trash instead of delete
 brew install webkit2png # Creates screenshots of webpages
 brew install youtube-dl # youtube downloader
 brew install exiv2 # image metadata library and tools
-brew install jenv # Java environment manager
+brew install cmake # make library
+brew install tmux # terminal multiplexer
 # brew install lua # Powerful, fast, lightweight, embeddable scripting language
 # brew install lynx # Terminal based web browser
 # brew install p7zip
@@ -114,9 +109,6 @@ brew tap caskroom/versions
 # Core casks
 brew cask install --appdir="/Applications" bettertouchtool
 brew cask install --appdir="/Applications" iterm2
-brew cask install --appdir="/Applications" android-studio
-brew cask install java7
-brew cask install java
 
 # Install QuickLook tools
 brew cask install qlcolorcode # Preview source code files with syntax highlighting
@@ -134,13 +126,11 @@ brew cask install suspicious-package # Preview contents of a standard Apple inst
 brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
-brew cask install --appdir="/Applications" intellij-idea
-brew cask install --appdir="/Applications" eclipse-jee
-brew cask install --appdir="/Applications" github-desktop 
+#brew cask install --appdir="/Applications" github-desktop 
+brew cask install --appdir="/Applications" sourcetree
 brew cask install --appdir="/Applications" jd-gui 
 brew cask install --appdir="/Applications" webstorm 
 brew cask install --appdir="/Applications" diffmerge
-brew cask install --appdir="/Applications" android-studio
 #brew cask install --appdir="/Applications" heroku-toolbelt
 
 # Misc casks
@@ -155,9 +145,7 @@ brew cask install --appdir="/Applications" caffeine
 brew cask install --appdir="/Applications" spotify
 brew cask install --appdir="/Applications" adium
 brew cask install --appdir="/Applications" appcleaner
-brew cask install --appdir="/Applications" noizio
 brew cask install --appdir="/Applications" calibre
-brew cask install --appdir="/Applications" monosnap
 brew cask install --appdir="/Applications" evernote
 brew cask install --appdir="/Applications" diffmerge
 brew cask install --appdir="/Applications" flux

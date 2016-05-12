@@ -19,6 +19,10 @@ fi
 brew update
 
 brew install node
+brew install go
+brew install ruby
+brew install gnupg # for verifying rvm key
+
 
 #npm install -g coffee-script
 npm install -g grunt-cli
@@ -28,6 +32,10 @@ npm install -g less
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# Install RVM
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+\curl -sSL https://get.rvm.io | bash -s stable
 
 # Set up Ruby Environment
 gem update --system

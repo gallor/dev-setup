@@ -18,12 +18,20 @@ fi
 # Make sure we’re using the latest Homebrew.
 brew update
 
+# Java related brews
+brew install jenv # Java environment manager
+brew install maven
+brew install ant
+brew install gradle
+
 # Install Cask
 brew install caskroom/cask/brew-cask
 
 brew cask install --appdir="~/Applications" java
-brew cask install --appdir="~/Applications" intellij-idea-ce
+brew cask install --appdir="~/Applications" java7
+brew cask install --appdir="~/Applications" intellij-idea
 brew cask install --appdir="~/Applications" android-studio
+brew cask install --appdir="/Applications" eclipse-jee
 
 brew install android-sdk
 

@@ -16,10 +16,12 @@ function runDots() {
             echo "Syncing the dev-setup and dotfiles repo to your local machine."
             echo "------------------------------"
             echo ""
-            cd ~ && curl -#L https://github.com/gallor/dev-setup/tarball/master | tar -xzv
+			mkdir -P ~/dev/{js,java,python,git,lib}/workspace
+            cd ~/dev/git && curl -#L https://github.com/gallor/dev-setup/tarball/master | tar -xzv
 			--strip-components 1 --exclude={README.md,LICENSE,CREDITS.md}
             curl -#L https://github.com/gallor/dotfiles/tarball/master | tar -xzv
 			--strip-components 1 --exclude={README.md,LICENSE,CREDITS.md}
+			./bootstrap.sh
         fi
         if [ $ARG == "osxprep" ] || [ $ARG == "all" ]; then
             # Run the osxprep.sh Script
@@ -82,33 +84,41 @@ function runDots() {
             echo ""
             ./datastores.sh
         fi
-        if [ $ARG == "webdev" ] || [ $ARG == "all" ]; then
+        if [ $ARG == "web" ] || [ $ARG == "all" ]; then
             # Run the webdev.sh Script
             echo "------------------------------"
             echo "Setting up JavaScript web development environment."
             echo "------------------------------"
             echo ""
-            #./webdev.sh # coming soon
+            ./web.sh 
         fi
-        if [ $ARG == "android" ] || [ $ARG == "all" ]; then
+        if [ $ARG == "java" ] || [ $ARG == "all" ]; then
             # Run the android.sh Script
             echo "------------------------------"
-            echo "Setting up Android development environment."
+            echo "Setting up Java development environment."
             echo "------------------------------"
             echo ""
-            ./android.sh
+            ./java.sh
         fi
     done
 
     echo "------------------------------"
-    echo "Completed running .dots, restart your computer to ensure all updates take effect"
+    echo "Completed running setup, restart your computer to ensure all updates take effect"
     echo "------------------------------"
 }
 
+
+echo "------------------------------"
 read -p "This script may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
-echo "";
+echo "------------------------------"
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-    runDots $@
+
+	echo "------------------------------"
+	echo "Please choose from the following list: bootstrap, osxprep, osx, brew, aws, pydata, datastores, web, or java.";
+	echo "------------------------------"
+	read response
+	echo "";
+    runDots $response
 fi;
 
 unset runDots;

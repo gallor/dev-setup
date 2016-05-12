@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-mkdir -P ~/dev/{js,java,python,git,lib}/workspace
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-git pull origin master;
+#git pull origin master;
 
 function doIt() {
     rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
