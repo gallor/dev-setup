@@ -76,7 +76,6 @@ brew install ack # Text search tool akin to grep
 brew install tree # directory structure print out
 brew install htop-osx # top with extra functionality
 brew install dark-mode # Toggle the OS X Dark Mode from the command-line
-brew install git
 brew install git-lfs # Git Large File Storage
 brew install git-flow # Automate git branching workflow
 brew install imagemagick --with-webp # Image editing

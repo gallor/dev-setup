@@ -11,11 +11,11 @@ function runDots() {
     for ARG in "$@"
     do
         if [ $ARG == "bootstrap" ] || [ $ARG == "all" ]; then
-            echo ""
-            echo "------------------------------"
-            echo "Updating OSX and installing Xcode command line tools"
-            echo "------------------------------"
-            echo ""
+			echo ""
+			echo "------------------------------"
+			echo "Updating OSX and installing Xcode command line tools"
+			echo "------------------------------"
+			echo ""
 			./osxprep.sh 
 
             echo ""
@@ -23,11 +23,6 @@ function runDots() {
             echo "Syncing the dev-setup and dotfiles repo to your local machine."
             echo "------------------------------"
             echo ""
-			mkdir -P ~/dev/{js,java,python,git,lib}/workspace
-            cd ~/dev/git && curl -#L https://github.com/gallor/dev-setup/tarball/master | tar -xzv\
-			--strip-components=1 --exclude={README.md,LICENSE,CREDITS.md}
-            curl -#L https://github.com/gallor/dotfiles/tarball/master | tar -xzv\
-			--strip-components=1 --exclude={README.md,LICENSE,CREDITS.md}
 			./bootstrap.sh
         fi
         if [ $ARG == "brew" ] || [ $ARG == "all" ]; then
@@ -105,6 +100,29 @@ function runDots() {
     echo "------------------------------"
 }
 
+function init() {
+
+	# Check for Homebrew,
+	# Install if we don't have it
+	if test ! $(which brew); then
+	  echo "Installing homebrew..."
+	  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	fi
+	
+	# Make sure we’re using the latest Homebrew.
+	brew update
+
+	# Install Git
+	brew install git
+
+	# Cloning git repositories as I will be symlinking the dotfiles to the desktop so that changes can always be committed easily
+	mkdir -P ~/dev/{js,java,python,git,lib}/workspace
+	cd ~/dev/git 
+	git clone https://github.com/gallor/dev-setup.git
+	git clone https://github.com/gallor/dotfiles.git
+	# curl -#L https://github.com/gallor/dev-setup/tarball/master | tar -xzv --strip-components=1 --exclude={README.md,LICENSE,CREDITS.md}
+	# curl -#L https://github.com/gallor/dotfiles/tarball/master | tar -xzv --strip-components=1 --exclude={README.md,LICENSE,CREDITS.md}
+}
 
 echo "------------------------------"
 read -p "This script may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
@@ -115,8 +133,10 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 	echo "Please choose from the following list: bootstrap, osx, brew, aws, pydata, datastores, web, or java.";
 	echo "------------------------------"
 	read response
-	echo "";
+	echo ""
+	init
     runDots $response
 fi;
 
+unset init;
 unset runDots;
