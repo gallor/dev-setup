@@ -13,24 +13,22 @@ function runDots() {
         if [ $ARG == "bootstrap" ] || [ $ARG == "all" ]; then
             echo ""
             echo "------------------------------"
+            echo "Updating OSX and installing Xcode command line tools"
+            echo "------------------------------"
+            echo ""
+			./osxprep.sh 
+
+            echo ""
+            echo "------------------------------"
             echo "Syncing the dev-setup and dotfiles repo to your local machine."
             echo "------------------------------"
             echo ""
 			mkdir -P ~/dev/{js,java,python,git,lib}/workspace
-            cd ~/dev/git && curl -#L https://github.com/gallor/dev-setup/tarball/master | tar -xzv
-			--strip-components 1 --exclude={README.md,LICENSE,CREDITS.md}
-            curl -#L https://github.com/gallor/dotfiles/tarball/master | tar -xzv
-			--strip-components 1 --exclude={README.md,LICENSE,CREDITS.md}
+            cd ~/dev/git && curl -#L https://github.com/gallor/dev-setup/tarball/master | tar -xzv\
+			--strip-components=1 --exclude={README.md,LICENSE,CREDITS.md}
+            curl -#L https://github.com/gallor/dotfiles/tarball/master | tar -xzv\
+			--strip-components=1 --exclude={README.md,LICENSE,CREDITS.md}
 			./bootstrap.sh
-        fi
-        if [ $ARG == "osxprep" ] || [ $ARG == "all" ]; then
-            # Run the osxprep.sh Script
-            echo ""
-            echo "------------------------------"
-            echo "Updating OSX and installing Xcode command line tools"
-            echo "------------------------------"
-            echo ""
-            ./osxprep.sh
         fi
         if [ $ARG == "brew" ] || [ $ARG == "all" ]; then
             # Run the brew.sh Script
@@ -114,7 +112,7 @@ echo "------------------------------"
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 
 	echo "------------------------------"
-	echo "Please choose from the following list: bootstrap, osxprep, osx, brew, aws, pydata, datastores, web, or java.";
+	echo "Please choose from the following list: bootstrap, osx, brew, aws, pydata, datastores, web, or java.";
 	echo "------------------------------"
 	read response
 	echo "";
