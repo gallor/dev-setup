@@ -130,7 +130,7 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 #sudo ln -s /path/to/your/image /System/Library/CoreServices/DefaultDesktop.jpg
 
 # Install PowerLine fonts for the use with the Airline Vim plugin
-wget https://github.com/powerline/fonts/archive/master.zip
+curl https://github.com/powerline/fonts/archive/master.zip
 unzip master.zip -d power-line-fonts
 cd power-line-fonts
 ./install.sh
@@ -191,7 +191,10 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 0.02
+
+# Set a shorter delay until key repeat
+defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
 # Set language and text formats
 #defaults write NSGlobalDomain AppleLanguages -array "en"
@@ -257,10 +260,10 @@ defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Finder: show hidden files by default
-defaults write com.apple.finder AppleShowAllFiles -bool true
+# defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Finder: show all filename extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+# defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # Finder: show status bar
 #defaults write com.apple.finder ShowStatusBar -bool true
@@ -796,7 +799,7 @@ cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ 
 ###############################################################################
 # Misc Operations                                                             #
 ###############################################################################
-wget -P ~/Desktop http://www.rubicode.com/Downloads/RCDefaultApp-2.1.X.dmg
+# wget -P ~/Desktop http://www.rubicode.com/Downloads/RCDefaultApp-2.1.X.dmg
 
 ###############################################################################
 # Kill affected applications                                                  #

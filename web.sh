@@ -22,20 +22,20 @@ brew install node
 brew install go
 brew install ruby
 brew install gnupg # for verifying rvm key
+brew install nvm
 
 
-#npm install -g coffee-script
-npm install -g grunt-cli
 npm install -g jshint
-npm install -g less
+# npm install -g grunt-cli
+# npm install -g less
 # npm install -g deployd
 
 # Remove outdated versions from the cellar.
 brew cleanup
 
 # Install RVM
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-\curl -sSL https://get.rvm.io | bash -s stable
+# gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+# \curl -sSL https://get.rvm.io | bash -s stable
 
 # Set up Ruby Environment
 gem update --system
@@ -44,6 +44,9 @@ gem update --system
 gem install compass
 gem install sass
 gem install json
+
+# Make nvm directory
+mkdir ~/.nvm
 
 # Install Development Fonts
 
@@ -54,5 +57,5 @@ if test ! $(which git); then
 fi	
 
 wget -P ~/Desktop https://github.com/google/fonts/blob/master/ofl/inconsolata/Inconsolata-Bold.ttf?raw=true
-wget -P ~/Destkop https://github.com/google/fonts/blob/master/ofl/inconsolata/Inconsolata-Regular.ttf?raw=true
+wget -P ~/Desktop https://github.com/google/fonts/blob/master/ofl/inconsolata/Inconsolata-Regular.ttf?raw=true
 wget -P ~/Desktop https://github.com/powerline/fonts/blob/master/Inconsolata-g/Inconsolata-g%20for%20Powerline.otf?raw=true

@@ -27,10 +27,10 @@ brew install gradle
 # Install Cask
 brew install caskroom/cask/brew-cask
 
-brew cask install --appdir="~/Applications" java
-brew cask install --appdir="~/Applications" java7
+brew cask install java
+brew cask install java9
 brew cask install --appdir="~/Applications" intellij-idea
-brew cask install --appdir="~/Applications" android-studio
+# brew cask install --appdir="~/Applications" android-studio
 brew cask install --appdir="/Applications" eclipse-jee
 
 brew install android-sdk

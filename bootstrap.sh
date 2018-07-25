@@ -9,10 +9,11 @@ function doIt() {
     #    --exclude "README.md" --exclude "LICENSE" -avh --no-perms . ~;
     #source ~/.bashrc;
 	if [ -d ~/dev/git/dotfiles ]; then
-		FILES="~/dev/git/dotfiles"
+		FILES="$(ls -la | grep -lr --exclude-dir=.git . ${HOME}/dev/git/dotfiles)"
 		for f in $FILES
 		do
-			ln -s ~/dev/git/dotfiles/$FILES ~/$FILES;
+		FILE="$(basename $f)"
+		ln -s ${HOME}/dev/git/dotfiles/$FILE ${HOME}/$FILE;
 		done
 	fi
 }

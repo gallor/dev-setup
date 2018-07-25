@@ -55,15 +55,12 @@ brew install wget --with-iri
 
 # Install Python
 brew install python
-brew install python3
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php55 --with-gmp
-
 
 # Install Web font tools.
 # brew tap bramstein/webfonttools
@@ -86,6 +83,7 @@ brew install youtube-dl # youtube downloader
 brew install exiv2 # image metadata library and tools
 brew install cmake # make library
 brew install tmux # terminal multiplexer
+brew install the_silver_searcher # AG searching support in vim
 # brew install lua # Powerful, fast, lightweight, embeddable scripting language
 # brew install lynx # Terminal based web browser
 # brew install p7zip
@@ -93,6 +91,10 @@ brew install tmux # terminal multiplexer
 # brew install pv # monitor process of data through a pipeline
 # brew install rename # Perl based rename functionality
 # brew install rhino # JavaScript written entirely in Java
+
+# Universal Ctags: maintained ctags branch of exhuberant ctags
+brew tap universal-ctags/univeral-ctags
+brew install --HEAD universal-ctags
 
 # Install Heroku
 #brew install heroku-toolbelt
@@ -126,15 +128,17 @@ brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
 #brew cask install --appdir="/Applications" github-desktop 
-brew cask install --appdir="/Applications" sourcetree
+brew cask install --appdir="/Applications" gitkraken
 brew cask install --appdir="/Applications" jd-gui 
-brew cask install --appdir="/Applications" webstorm 
+#brew cask install --appdir="/Applications" webstorm 
 brew cask install --appdir="/Applications" diffmerge
+brew cask install --appdir="/Applications" visual-studio-code
 #brew cask install --appdir="/Applications" heroku-toolbelt
 
 # Misc casks
 brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" google-chrome-canary
+brew cask install --appdir="/Applications" opera
 brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" dropbox
@@ -142,17 +146,16 @@ brew cask install --appdir="/Applications" keka
 brew cask install --appdir="/Applications" google-drive
 brew cask install --appdir="/Applications" caffeine 
 brew cask install --appdir="/Applications" spotify
-brew cask install --appdir="/Applications" adium
 brew cask install --appdir="/Applications" appcleaner
 brew cask install --appdir="/Applications" calibre
 brew cask install --appdir="/Applications" evernote
-brew cask install --appdir="/Applications" diffmerge
 brew cask install --appdir="/Applications" flux
-brew cask install --appdir="/Applications" google-photos-backup
+brew cask install --appdir="/Applications" google-backup-and-sync
 brew cask install --appdir="/Applications" handbrake
 brew cask install --appdir="/Applications" mpeg-streamclip
-brew cask install --appdir="/Applications" sketchup
 brew cask install functionflip
+brew cask install --appdir="/Applications" robo-3t
+brew cask install --appdir="/Applications" google-play-music-desktop-player
 
 # Install Docker, which requires virtualbox
 # brew install docker

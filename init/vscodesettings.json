@@ -1,0 +1,68 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.fontFamily": "Inconsolata, Menlo, Monaco, 'Courier New'",
+    "editor.scrollBeyondLastLine": false,
+    "editor.minimap.enabled": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/CVS": true,
+        "**/.DS_STORE": true,
+        "**/node_modules": true
+    },
+    "workbench.colorTheme": "Hybrid Next (Gray Background)",
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#3c3c3c",
+        "panel.background": "#333333",
+        "sideBar.background": "#333333",
+        "editor.background": "#2c2c2c",
+        "activityBar.background": "#3c3c3c"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "vim.leader": ",",
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [";"],
+            "after": [":"]
+        },
+        {
+            "before": ["<leader>","<space>"],
+            "commands": [
+                ":nohl"
+            ]
+        },
+        {
+            "before": ["<leader>","l"],
+            "after": ["<C-w>","l"]
+        },
+        {
+            "before": ["<leader>","h"],
+            "after": ["<C-w>","h"]
+        },
+        {
+            "before": ["<leader>","j"],
+            "after": ["<C-w>","j"]
+        },
+        {
+            "before": ["<leader>","k"],
+            "after": ["<C-w>","k"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [">"],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": ["<"],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        }
+    ],
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    }
+}
