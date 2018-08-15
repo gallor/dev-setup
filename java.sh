@@ -31,7 +31,7 @@ brew cask install java
 brew cask install java9
 brew cask install --appdir="~/Applications" intellij-idea
 # brew cask install --appdir="~/Applications" android-studio
-brew cask install --appdir="/Applications" eclipse-jee
+# brew cask install --appdir="/Applications" eclipse-jee
 
 brew install android-sdk
 
