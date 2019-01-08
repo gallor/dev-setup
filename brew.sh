@@ -55,6 +55,9 @@ brew install wget --with-iri
 
 # Install Python
 brew install python
+echo ==============================================================================
+echo Make note of python install location and add to path to override system python
+echo ==============================================================================
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
@@ -124,16 +127,13 @@ brew cask install webpquicklook # Preview Webp images
 brew cask install suspicious-package # Preview contents of a standard Apple installer package
 
 # Development tool casks
-brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
-#brew cask install --appdir="/Applications" github-desktop 
 brew cask install --appdir="/Applications" gitkraken
 brew cask install --appdir="/Applications" jd-gui 
-#brew cask install --appdir="/Applications" webstorm 
 brew cask install --appdir="/Applications" diffmerge
 brew cask install --appdir="/Applications" visual-studio-code
-#brew cask install --appdir="/Applications" heroku-toolbelt
+ brew cask install --appdir="/Applications" docker
 
 # Misc casks
 brew cask install --appdir="/Applications" google-chrome
@@ -156,11 +156,6 @@ brew cask install --appdir="/Applications" mpeg-streamclip
 brew cask install functionflip
 brew cask install --appdir="/Applications" robo-3t
 brew cask install --appdir="/Applications" google-play-music-desktop-player
-
-# Install Docker, which requires virtualbox
-# brew install docker
-# brew install boot2docker
-# brew install docker-compose
 
 # Remove outdated versions from the cellar.
 brew cleanup

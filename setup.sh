@@ -117,6 +117,7 @@ function init() {
 
 	# Cloning git repositories as I will be symlinking the dotfiles to the desktop so that changes can always be committed easily
 	mkdir -P ~/dev/{js,java,python,git,lib}/workspace
+    mkdir ~/dev/java/lib
 	cd ~/dev/git 
 	git clone https://github.com/gallor/dev-setup.git
 	git clone https://github.com/gallor/dotfiles.git
@@ -130,7 +131,7 @@ echo "------------------------------"
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 
 	echo "------------------------------"
-	echo "Please choose from the following list: bootstrap, osx, brew, aws, pydata, datastores, web, or java.";
+	echo "Please choose from the following list: bootstrap, osx, brew, datastores, web, or java.";
 	echo "------------------------------"
 	read response
 	echo ""

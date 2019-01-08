@@ -53,36 +53,15 @@ mkdir ~/.nvm
 
 # Install VSCode extensions
 if brew cask info visual-studio-code &>/dev/null; then
-    code --install-extension Zignd.html-css-class-completion
-    code --install-extension hristian-kohler.npm-intellisense
-    code --install-extension hristian-kohler.path-intellisense
-    code --install-extension baeumer.vscode-eslint
-    code --install-extension eerawan.vscode-dash
-    code --install-extension onjayamanne.githistory
-    code --install-extension zannotti.vscode-babel-coloring
-    code --install-extension amodio.gitlens
-    code --install-extension ormulahendry.code-runner
-    code --install-extension rapeCity.gc-excelviewer
-    code --install-extension ookyQR.beautify
-    code --install-extension umao.rest-client
-    code --install-extension eizongmin.node-module-intellisense
-    code --install-extension ici.require-js
-    code --install-extension rmlnc.vscode-less
-    code --install-extension rmlnc.vscode-scss
-    code --install-extension s-python.python
-    code --install-extension sjsdiag.debugger-for-chrome
-    code --install-extension atrys.vscode-code-outline
-    code --install-extension Kief.material-icon-theme
-    code --install-extension edhat.java
-    code --install-extension leistner.vscode-fileutils
-    code --install-extension ourcegraph.javascript-typescript
-    code --install-extension scjava.vscode-java-debug
-    code --install-extension scjava.vscode-java-pack
-    code --install-extension scjava.vscode-java-test
-    code --install-extension scjava.vscode-maven
-    code --install-extension scodevim.vim
-    code --install-extension yze.theme-hybrid-next
+    code --install-extension shan.code-settings-sync 
 fi
+
+echo "===================="
+echo "To sync VSCode"
+echo "Copy Gist Id"
+echo "77359f81323c0b512ebe3a6df1db6ef1"
+echo "to download settings"
+echo "===================="
 
 # Install Development Fonts
 
@@ -91,7 +70,3 @@ if test ! $(which git); then
   brew install git
   git clone https://github.com/andreberg/Meslo-Font.git ~/Desktop/Meslo-Font
 fi	
-
-wget -P ~/Desktop https://github.com/google/fonts/blob/master/ofl/inconsolata/Inconsolata-Bold.ttf?raw=true
-wget -P ~/Desktop https://github.com/google/fonts/blob/master/ofl/inconsolata/Inconsolata-Regular.ttf?raw=true
-wget -P ~/Desktop https://github.com/powerline/fonts/blob/master/Inconsolata-g/Inconsolata-g%20for%20Powerline.otf?raw=true

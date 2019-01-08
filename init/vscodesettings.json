@@ -1,4 +1,5 @@
 {
+    "explorer.autoReveal": false,
     "files.autoSave": "onFocusChange",
     "editor.fontSize": 12,
     "editor.fontFamily": "Inconsolata, Menlo, Monaco, 'Courier New'",
@@ -11,8 +12,7 @@
     "files.exclude": {
         "**/.git": true,
         "**/CVS": true,
-        "**/.DS_STORE": true,
-        "**/node_modules": true
+        "**/.DS_STORE": true
     },
     "workbench.colorTheme": "Hybrid Next (Gray Background)",
     "workbench.colorCustomizations": {
@@ -81,6 +81,16 @@
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
-    "terminal.integrated.shellArgs.osx": []
-
+    "terminal.integrated.shellArgs.osx": [],
+    "sync.gist": "77359f81323c0b512ebe3a6df1db6ef1",
+    "sync.quietSync": false,
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.forceDownload": false,
+    "window.title": "${activeEditorMedium}",
+    "editor.parameterHints.enabled": false,
+    "workbench.settings.editor": "json"
+    // "terminal.integrated.rendererType": "dom"
 }

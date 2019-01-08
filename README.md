@@ -52,10 +52,6 @@ This repo takes a more **light-weight** approach to automation using a combinati
     * Installs common Homebrew formulae and apps
 * [osx.sh script](#osxsh-script)
     * Sets up OS X defaults geared towards developers
-* [pydata.sh script](#pydatash-script)
-    * Sets up python for data analysis
-* [aws.sh script](#awssh-script)
-    * Sets up Spark, Hadoop MapReduce, and Amazon Web Services
 * [datastores.sh script](#datastoressh-script)
     * Sets up common data stores
 * [web.sh script](#websh-script)
@@ -78,36 +74,7 @@ This repo takes a more **light-weight** approach to automation using a combinati
 * [Virtualenv](#virtualenv)
 * [Virtualenvwrapper](#virtualenvwrapper)
 
-## Section 3: Python Data Analysis
-
-* [Anaconda](#anaconda)
-* [IPython Notebook](#ipython-notebook)
-* [NumPy](#numpy)
-* [Pandas](#pandas)
-* [Matplotlib](#matplotlib)
-* [Seaborn](#seaborn)
-* [Scikit-learn](#scikit-learn)
-* [SciPy](#scipy)
-* [Flask](#flask)
-* [Bokeh](#bokeh)
-
-## Section 4: Big Data, AWS, and Heroku
-
-* [Spark](#spark)
-* [MapReduce](#mapreduce)
-* [AWS Account](#aws-account)
-* [AWS CLI](#aws-cli)
-* [Boto](#boto)
-* [S3cmd](#s3cmd)
-* [S3DistCp](#s3distcp)
-* [S3-parallel-put](#s3-parallel-put)
-* [Redshift](#redshift)
-* [Kinesis](#kinesis)
-* [Lambda](#lambda)
-* [AWS Machine Learning](#aws-machine-learning)
-* [Heroku](#heroku)
-
-## Section 5: Data Stores
+## Section 3: Data Stores
 
 * [MySQL](#mysql)
 * [MySQL Workbench](#mysql-workbench)
@@ -115,13 +82,13 @@ This repo takes a more **light-weight** approach to automation using a combinati
 * [Redis](#redis)
 * [Elasticsearch](#elasticsearch)
 
-## Section 6: JavaScript Web Development
+## Section 4: JavaScript Web Development
 
 * [Node.js](#nodejs)
 * [JSHint](#jshint)
 * [Less](#less)
 
-## Section 7: Android Development
+## Section 5: Android Development
 
 * [Java](#java)
 * [Android SDK](#android-sdk)
@@ -158,9 +125,9 @@ Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`:
 
     $ ./.dots bootstrap osxprep brew osx
 
-Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`, and `datastores.sh`:
+Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, and `datastores.sh`:
 
-    $ ./.dots bootstrap osxprep brew osx pydata aws datastores
+    $ ./.dots bootstrap osxprep brew osx datastores
 
 #### Running without Git
 
@@ -180,16 +147,12 @@ Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`
     * Installs common Homebrew formulae and apps
 * [osx.sh](https://github.com/donnemartin/dev-setup/blob/master/osx.sh)
     * Sets up OS X defaults geared towards developers
-* [pydata.sh](https://github.com/donnemartin/dev-setup/blob/master/pydata.sh)
-    * Sets up python for data analysis
-* [aws.sh](https://github.com/donnemartin/dev-setup/blob/master/aws.sh)
-    * Sets up Spark, Hadoop MapReduce, and Amazon Web Services
 * [datastores.sh](https://github.com/donnemartin/dev-setup/blob/master/datastores.sh)
     * Sets up common data stores
 * [web.sh](https://github.com/donnemartin/dev-setup/blob/master/web.sh)
     * Sets up JavaScript web development
 * [android.sh](https://github.com/donnemartin/dev-setup/blob/master/android.sh)
-    * Sets up Android development
+    * Sets up Java and Android development
 
 **Notes:**
 
@@ -341,46 +304,6 @@ Run the `osx.sh` script:
 
 **For your terminal customization to take full effect, quit and re-start the terminal.**
 
-### pydata.sh script
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/pydata.png">
-  <br/>
-</p>
-
-To set up a development environment to work with Python and data analysis without relying on the more heavyweight [Anaconda](#anaconda) distribution, run the `pydata.sh` script:
-
-    $ ./pydata.sh
-
-This will install [Virtualenv](#virtualenv) and [Virtualenvwrapper](#virtualenvwrapper).  It will then set up two virtual environments loaded with the packages you will need to work with data in Python 2 and Python 3.
-
-To switch to the Python 2 virtual environment, run the following Virtualenvwrapper command:
-
-    $ workon py2-data
-
-To switch to the Python 3 virtual environment, run the following Virtualenvwrapper command:
-
-    $ workon py3-data
-
-Then start working with the installed packages, for example:
-
-    $ ipython notebook
-
-[Section 3: Python Data Analysis](#section-3-python-data-analysis) describes the installed packages and usage.
-
-### aws.sh script
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws.png">
-  <br/>
-</p>
-
-To set up a development environment to work with Spark, Hadoop MapReduce, and Amazon Web Services, run the `aws.sh` script:
-
-    $ ./aws.sh
-
-[Section 4: Big Data, AWS, and Heroku](#section-4-big-data-aws-and-heroku) describes the installed packages and usage.
-
 ### datastores.sh script
 
 <p align="center">
@@ -422,15 +345,6 @@ To set up an Android development environment, run the `android.sh` script:
 
 ## Section 2: General Apps and Tools
 
-### Sublime Text
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/sublime.png">
-  <br/>
-</p>
-
-With the terminal, the text editor is a developer's most important tool. Everyone has their preferences, but unless you're a hardcore [Vim](http://en.wikipedia.org/wiki/Vim_(text_editor)) user, a lot of people are going to tell you that [Sublime Text](http://www.sublimetext.com/) is currently the best one out there.
-
 #### Installation
 
 The [brew.sh script](#brewsh-script) installs Sublime Text.
@@ -447,7 +361,7 @@ The [osx.sh script](#osxsh-script) contains Sublime Text configurations.
 
 #### Soda Theme
 
-The [Soda Theme](https://github.com/buymeasoda/soda-theme) is a great UI theme for Sublime Text, especially if you use a dark theme and think the side bar sticks out like a sore thumb.
+The [Hybrid Theme](https://github.com/buymeasoda/soda-theme) is a great UI theme for Sublime Text, especially if you use a dark theme and think the side bar sticks out like a sore thumb.
 
 ##### Installation with Sublime Package Control
 
