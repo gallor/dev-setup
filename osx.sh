@@ -130,8 +130,9 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 #sudo ln -s /path/to/your/image /System/Library/CoreServices/DefaultDesktop.jpg
 
 # Install PowerLine fonts for the use with the Airline Vim plugin
-curl https://github.com/powerline/fonts/archive/master.zip
-unzip master.zip -d power-line-fonts
+curl https://codeload.github.com/powerline/fonts/zip/master -o $(HOME)/Desktop/fonts.zip
+cd $(HOME)/Desktop
+unzip fonts.zip -d power-line-fonts
 cd power-line-fonts
 ./install.sh
 cd ../
@@ -190,7 +191,7 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 # Disable press-and-hold for keys in favor of key repeat
-# defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
 # defaults write NSGlobalDomain KeyRepeat -int 0.02
@@ -644,7 +645,7 @@ start_if_needed() {
 
 # Install the Custom Colors for iTerm
 start_if_needed iTerm
-open "${HOME}/init/iTerm Colors.itermcolors"
+open "${PWD}/init/iTerm Colors.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false

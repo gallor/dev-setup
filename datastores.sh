@@ -26,13 +26,6 @@ brew install mongodb
 #brew install elasticsearch
 #brew install packer
 
-# Install mysql workbench
-# Install Cask
-if test ! $(which cask); then
-	echo "Installing homebrew cask"
-	brew install caskroom/cask/brew-cask
-fi
-
 brew cask install --appdir="/Applications" mysqlworkbench
 
 # Remove outdated versions from the cellar.

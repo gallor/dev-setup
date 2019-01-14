@@ -30,11 +30,13 @@ brew cleanup
 # \curl -sSL https://get.rvm.io | bash -s stable
 
 # Install NVM
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-source .bashrc
-if test $(which nvmm) then
-    echo "Installing Node 8.6..."
-    nvm install v8.6.0
+if test ! $(which nvm); then
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+    source ~/.bashrc;
+fi
+
+echo "Installing Node 8.6..."
+nvm install v8.6.0
 
 npm install -g jshint
 # npm install -g grunt-cli

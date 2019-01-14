@@ -61,9 +61,10 @@ echo ===========================================================================
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
+
+# Install Vim vundle and plugins
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
 # Install Web font tools.
 # brew tap bramstein/webfonttools
@@ -107,8 +108,7 @@ brew install --HEAD universal-ctags
 brew install dash # Docs
 
 # Install Cask
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
+brew tap caskroom/cask
 
 # Core casks
 brew cask install --appdir="/Applications" bettertouchtool
@@ -133,7 +133,7 @@ brew cask install --appdir="/Applications" gitkraken
 brew cask install --appdir="/Applications" jd-gui 
 brew cask install --appdir="/Applications" diffmerge
 brew cask install --appdir="/Applications" visual-studio-code
- brew cask install --appdir="/Applications" docker
+brew cask install --appdir="/Applications" docker
 
 # Misc casks
 brew cask install --appdir="/Applications" google-chrome
@@ -143,7 +143,7 @@ brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" dropbox
 brew cask install --appdir="/Applications" keka
-brew cask install --appdir="/Applications" google-drive
+brew cask install --appdir="/Applications" google-backup-and-sync
 brew cask install --appdir="/Applications" caffeine 
 brew cask install --appdir="/Applications" spotify
 brew cask install --appdir="/Applications" appcleaner

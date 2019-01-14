@@ -126,6 +126,19 @@ function init() {
 }
 
 echo "------------------------------"
+read -p "Is this the first time running this script? (y/n) " -n 1;
+echo "------------------------------"
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+	echo "------------------------------"
+	echo "Init script will run and set up dev folders, git, homebrew and cloned repos"
+	init
+fi;
+if [[ $REPLY =~ [Nn]$ ]]; then
+	echo "------------------------------"
+	echo "Init script will be skipped"
+fi;
+
+echo "------------------------------"
 read -p "This script may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
 echo "------------------------------"
 if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -135,7 +148,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 	echo "------------------------------"
 	read response
 	echo ""
-	init
     runDots $response
 fi;
 

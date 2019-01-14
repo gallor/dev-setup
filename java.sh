@@ -18,17 +18,17 @@ fi
 # Make sure we’re using the latest Homebrew.
 brew update
 
+# Install Java
+brew cask install java
+
 # Java related brews
 brew install jenv # Java environment manager
 brew install ant
 brew install gradle
 
-# Install Cask
-brew install caskroom/cask/brew-cask
-
 brew cask install java
 # brew cask install --appdir="~/Applications" intellij-idea
-brew cask install --appdir="~/Applications" android-studio
+# brew cask install --appdir="~/Applications" android-studio
 brew cask install --appdir="/Applications" eclipse-jee
 
 # brew install android-sdk
@@ -37,13 +37,10 @@ brew cask install --appdir="/Applications" eclipse-jee
 brew cleanup
 
 # Download maven directly from source
-if [-d ~/dev/java/lib ]; then
+if [ -d ~/dev/java/lib ]; then
     curl -o ~/dev/java/lib/maven.zip http://ftp.wayne.edu/apache/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.zip
     curl -o ~/dev/java/lib/maven-archetype.xml http://repo1.maven.org/maven2/archetype-catalog.xml
 else
     curl -o ~/Desktop/maven.zip http://ftp.wayne.edu/apache/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.zip
     curl -o ~/Desktop/maven-archetype.xml http://repo1.maven.org/maven2/archetype-catalog.xml
 fi
-echo "==========================================================="
-echo "Ensure MAVEN_HOME is set properly to point to this location"
-echo "==========================================================="
