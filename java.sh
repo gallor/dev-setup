@@ -26,7 +26,6 @@ brew install jenv # Java environment manager
 brew install ant
 brew install gradle
 
-brew cask install java
 # brew cask install --appdir="~/Applications" intellij-idea
 # brew cask install --appdir="~/Applications" android-studio
 brew cask install --appdir="/Applications" eclipse-jee

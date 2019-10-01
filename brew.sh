@@ -59,21 +59,9 @@ echo ===========================================================================
 echo Make note of python install location and add to path to override system python
 echo ==============================================================================
 
-# Install more recent versions of some OS X tools.
-brew install vim --override-system-vi
-
-# Install Vim vundle and plugins
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
-
-# Install Web font tools.
-# brew tap bramstein/webfonttools
-# brew install sfnt2woff
-# brew install sfnt2woff-zopfli
-# brew install woff2
-
 # Install other useful binaries.
 brew install ack # Text search tool akin to grep
+brew install ripgrep # recursive search tool by regex pattern
 brew install tree # directory structure print out
 brew install htop-osx # top with extra functionality
 brew install dark-mode # Toggle the OS X Dark Mode from the command-line
@@ -88,6 +76,10 @@ brew install exiv2 # image metadata library and tools
 brew install cmake # make library
 brew install tmux # terminal multiplexer
 brew install the_silver_searcher # AG searching support in vim
+brew install jq # json converter prettier
+brew install nginx # nginx server
+brew install task # taskwarrior
+brew install tasksh # taskwarrior shell
 # brew install lua # Powerful, fast, lightweight, embeddable scripting language
 # brew install lynx # Terminal based web browser
 # brew install p7zip
@@ -96,13 +88,8 @@ brew install the_silver_searcher # AG searching support in vim
 # brew install rename # Perl based rename functionality
 # brew install rhino # JavaScript written entirely in Java
 
-# Universal Ctags: maintained ctags branch of exhuberant ctags
-brew tap universal-ctags/univeral-ctags
-brew install --HEAD universal-ctags
-
-# Install Heroku
-#brew install heroku-toolbelt
-#heroku update
+# Exhuberant Ctags: universal ctags is not supported with js patterns for new syntax
+brew install ctags-exuberant
 
 # Apps
 brew install dash # Docs
@@ -110,9 +97,7 @@ brew install dash # Docs
 # Install Cask
 brew tap caskroom/cask
 
-# Core casks
-brew cask install --appdir="/Applications" bettertouchtool
-brew cask install --appdir="/Applications" iterm2
+# Utility tools
 
 # Install QuickLook tools
 brew cask install qlcolorcode # Preview source code files with syntax highlighting
@@ -126,19 +111,26 @@ brew cask install qlimagesize # Preview image size and dimensions
 brew cask install webpquicklook # Preview Webp images
 brew cask install suspicious-package # Preview contents of a standard Apple installer package
 
+# System tools
+brew cask install colorpicker-antetype
+brew cask install functionflip
+
 # Development tool casks
-brew cask install --appdir="/Applications" virtualbox
-brew cask install --appdir="/Applications" vagrant
-brew cask install --appdir="/Applications" gitkraken
 brew cask install --appdir="/Applications" jd-gui 
 brew cask install --appdir="/Applications" diffmerge
 brew cask install --appdir="/Applications" visual-studio-code
+brew cask install --appdir="/Applications" iterm2
+brew cask install --appdir="/Applications" robo-3t
+brew cask install --appdir="/Applications" dash3
+brew cask install --appdir="/Applications" postman
+brew cask install --appdir="/Applications" fork
+brew cask install --appdir="/Applications" charles
+brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" docker
 
 # Misc casks
+brew cask install --appdir="/Applications" bettertouchtool
 brew cask install --appdir="/Applications" google-chrome
-brew cask install --appdir="/Applications" google-chrome-canary
-brew cask install --appdir="/Applications" opera
 brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" dropbox
@@ -149,13 +141,11 @@ brew cask install --appdir="/Applications" spotify
 brew cask install --appdir="/Applications" appcleaner
 brew cask install --appdir="/Applications" calibre
 brew cask install --appdir="/Applications" evernote
-brew cask install --appdir="/Applications" flux
-brew cask install --appdir="/Applications" google-backup-and-sync
+brew cask install --appdir="/Applications" shifty
 brew cask install --appdir="/Applications" handbrake
 brew cask install --appdir="/Applications" mpeg-streamclip
-brew cask install functionflip
-brew cask install --appdir="/Applications" robo-3t
-brew cask install --appdir="/Applications" google-play-music-desktop-player
+brew cask install --appdir="/Applications" marshallofsound-google-play-music-player
+brew cask install --appdir="/Applications" ffmpeg
 
 # Remove outdated versions from the cellar.
 brew cleanup

@@ -36,12 +36,17 @@ if test ! $(which nvm); then
 fi
 
 echo "Installing Node 8.6..."
-nvm install v8.6.0
+nvm install v10.15.1
 
 npm install -g jshint
-# npm install -g grunt-cli
-# npm install -g less
-# npm install -g deployd
+npm install -g wscat
+npm install -g yarn
+npm install -g nodemon
+npm install -g npm-bundle
+npm install -g jest
+npm install -g eslint@^5.3.0
+npm install -g eslint-config-airbnb
+npm install -g eslint-plugin-jsx-a11y@^6.2.3 eslint-plugin-react eslint-plugin-import babel-eslint # support for ES6
 
 gem update --system
 
