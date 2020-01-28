@@ -22,22 +22,24 @@ function doIt() {
 	fi
 }
 
-function syncNeovim() {
-    if [[ ! -d ~/.config/nvim ]]; then
+function syncNeovimAndRG() {
+    if [[ ! -d ~/.config ]]; then
         mkdir -p ~/.config
     fi
     ln -s ${HOME}/dev/git/nvim ${HOME}/.config/nvim
+    ln -s ${HOME}/dev/git/ripgrep ${HOME}/.config/ripgrep
 }
+
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
     doIt;
-    syncNeovim
+    syncNeovimAndRG;
 else
     read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
     echo "";
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         doIt;
-        syncNeovim;
+        syncNeovimAndRG;
     fi;
 fi;
 unset doIt;

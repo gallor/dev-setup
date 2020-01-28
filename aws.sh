@@ -16,4 +16,14 @@ if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+brew tap aws/tap
+brew install s3cmd
 brew install aws-sam-cli
+echo "Confirm SAM and s3cmd installed correctly"
+sam --version
+s3cmd --version
+
+brew cask nosql-workbench-for-amazon-dynamodb
+
+brew tap TylerBrock/saw # CW log tailing tool
+brew install saw

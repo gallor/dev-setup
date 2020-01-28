@@ -39,7 +39,11 @@ nvim +PlugInstall +qall
 nvim +CocInstall\ coc-lists\ coc-eslint\ coc-json +qall 
 # denite 
 pip3 install --user pynvim 
-npm install -g neovim
+
+
+# Tmux
+brew install tmux # terminal multiplexer
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm # tmux plugin manager
 
 # Get Nerd Font to install for devicons
 cd ~/Library/Fonts && curl -fLo "InconsolataGo Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/InconsolataGo/Regular/complete/InconsolataGo%20Nerd%20Font%20Complete.ttf

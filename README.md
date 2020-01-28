@@ -12,7 +12,7 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 * **AWS**: Amazon Web Services (AWS CLI, AWS SAM CLI)
 * **Common data stores**: MySQL, PostgreSQL, MongoDB, Redis, and Elasticsearch
 * **Javascript web development**: Node.js, JSHint, and Less
-* **Android development**: Java, Maven, Ant, Jenv, Gradle Eclipse
+* **Java development**: Java, Eclipse, SDKManager 
 
 You can also automate the process by [running a single setup script](#single-setup-script) to install and configure specified sections.
 

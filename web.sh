@@ -18,6 +18,7 @@ fi
 # Make sure we’re using the latest Homebrew.
 brew update
 
+brew install yarn
 # brew install go
 # brew install ruby
 # brew install gnupg # for verifying rvm key
@@ -35,18 +36,17 @@ if test ! $(which nvm); then
     source ~/.bashrc;
 fi
 
-echo "Installing Node 8.6..."
+echo "Installing Node 10.15 LTS..."
 nvm install v10.15.1
 
-npm install -g jshint
-npm install -g wscat
-npm install -g yarn
-npm install -g nodemon
-npm install -g npm-bundle
-npm install -g jest
-npm install -g eslint@^5.3.0
-npm install -g eslint-config-airbnb
-npm install -g eslint-plugin-jsx-a11y@^6.2.3 eslint-plugin-react eslint-plugin-import babel-eslint # support for ES6
+yarn global add jshint
+yarn global add wscat
+yarn global add nodemon
+yarn global add npm-bundle
+yarn global add jest
+yarn global add eslint@^5.3.0
+yarn global add eslint-config-airbnb
+yarn global add eslint-plugin-jsx-a11y@^6.2.3 eslint-plugin-react eslint-plugin-import babel-eslint # support for ES6
 
 gem update --system
 

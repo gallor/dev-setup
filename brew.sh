@@ -33,7 +33,7 @@ brew install moreutils
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
-# Install Bash 4.
+# Install Bash 5.
 brew install bash
 brew tap homebrew/versions
 brew install bash-completion2
@@ -74,12 +74,12 @@ brew install webkit2png # Creates screenshots of webpages
 brew install youtube-dl # youtube downloader
 brew install exiv2 # image metadata library and tools
 brew install cmake # make library
-brew install tmux # terminal multiplexer
 brew install the_silver_searcher # AG searching support in vim
 brew install jq # json converter prettier
 brew install nginx # nginx server
 brew install task # taskwarrior
 brew install tasksh # taskwarrior shell
+brew install tavianator/tap/bfs # breadth first searching for GNU find
 # brew install lua # Powerful, fast, lightweight, embeddable scripting language
 # brew install lynx # Terminal based web browser
 # brew install p7zip
@@ -123,6 +123,7 @@ brew cask install --appdir="/Applications" iterm2
 brew cask install --appdir="/Applications" robo-3t
 brew cask install --appdir="/Applications" dash3
 brew cask install --appdir="/Applications" postman
+brew cask install --appdir="/Applications" mockoon
 brew cask install --appdir="/Applications" fork
 brew cask install --appdir="/Applications" charles
 brew cask install --appdir="/Applications" virtualbox
@@ -146,6 +147,7 @@ brew cask install --appdir="/Applications" handbrake
 brew cask install --appdir="/Applications" mpeg-streamclip
 brew cask install --appdir="/Applications" marshallofsound-google-play-music-player
 brew cask install --appdir="/Applications" ffmpeg
+brew cask install phoenix
 
 # Remove outdated versions from the cellar.
 brew cleanup
