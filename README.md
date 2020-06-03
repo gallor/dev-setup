@@ -70,6 +70,10 @@ Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, and `datastores.sh`:
     * Sets up JavaScript web development
 * [java.sh](https://github.com/gallor/dev-setup/blob/master/java.sh)
     * Sets up Java and Android development
+* [devops.sh](https://github.com/gallor/dev-setup/blob/master/devops.sh)
+    * Sets up Devops development tools
+* [python.sh](https://github.com/gallor/dev-setup/blob/master/python.sh)
+    * Sets up Python tools
 
 **Notes:**
 
@@ -137,7 +141,7 @@ To set up common data stores, run the `datastores.sh` script:
 
 ### web.sh script
 
-To set up a JavaScript web development environment, Run the `web.sh` script:
+To set up a JavaScript web development environment, run the `web.sh` script:
 
     $ ./web.sh
 
@@ -147,3 +151,14 @@ To set up an Android development/java environment, run the `java.sh` script:
 
     $ ./java.sh
 
+### devops.sh script
+
+To set up DevOps tools, run the `devops.sh` script:
+
+    $ ./devops.sh
+
+### python.sh script
+
+To set up Python tooling, run the `python.sh` script: 
+
+    $ ./python.sh

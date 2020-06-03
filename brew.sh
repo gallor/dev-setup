@@ -53,12 +53,6 @@ brew install wget --with-iri
 # brew install ringojs # Ringo is a JavaScript platform built on the JVM and optimized for server-side applications
 # brew install narwhal
 
-# Install Python
-brew install python
-echo ==============================================================================
-echo Make note of python install location and add to path to override system python
-echo ==============================================================================
-
 # Install other useful binaries.
 brew install ack # Text search tool akin to grep
 brew install ripgrep # recursive search tool by regex pattern
@@ -77,9 +71,11 @@ brew install cmake # make library
 brew install the_silver_searcher # AG searching support in vim
 brew install jq # json converter prettier
 brew install nginx # nginx server
-brew install task # taskwarrior
-brew install tasksh # taskwarrior shell
 brew install tavianator/tap/bfs # breadth first searching for GNU find
+brew install bat # bash syntax highlighting
+brew install mpv # CLI movie player
+brew install cmus # CLI media player
+brew install bitwarden-cli # password manager
 # brew install lua # Powerful, fast, lightweight, embeddable scripting language
 # brew install lynx # Terminal based web browser
 # brew install p7zip
@@ -90,6 +86,8 @@ brew install tavianator/tap/bfs # breadth first searching for GNU find
 
 # Exhuberant Ctags: universal ctags is not supported with js patterns for new syntax
 brew install ctags-exuberant
+
+brew install bitwarden-cli
 
 # Apps
 brew install dash # Docs
@@ -116,38 +114,38 @@ brew cask install colorpicker-antetype
 brew cask install functionflip
 
 # Development tool casks
-brew cask install --appdir="/Applications" jd-gui 
-brew cask install --appdir="/Applications" diffmerge
-brew cask install --appdir="/Applications" visual-studio-code
-brew cask install --appdir="/Applications" iterm2
-brew cask install --appdir="/Applications" robo-3t
-brew cask install --appdir="/Applications" dash3
-brew cask install --appdir="/Applications" postman
-brew cask install --appdir="/Applications" mockoon
-brew cask install --appdir="/Applications" fork
-brew cask install --appdir="/Applications" charles
-brew cask install --appdir="/Applications" virtualbox
-brew cask install --appdir="/Applications" docker
+brew cask install jd-gui 
+brew cask install diffmerge
+brew cask install visual-studio-code
+brew cask install iterm2
+brew cask install robo-3t
+brew cask install dash3
+brew cask install insomnia
+brew cask install mockoon
+brew cask install fork
+brew cask install virtualbox
+brew cask install docker
+brew cask install proxyman
 
 # Misc casks
-brew cask install --appdir="/Applications" bettertouchtool
-brew cask install --appdir="/Applications" google-chrome
-brew cask install --appdir="/Applications" firefox
-brew cask install --appdir="/Applications" slack
-brew cask install --appdir="/Applications" dropbox
-brew cask install --appdir="/Applications" keka
-brew cask install --appdir="/Applications" google-backup-and-sync
-brew cask install --appdir="/Applications" caffeine 
-brew cask install --appdir="/Applications" spotify
-brew cask install --appdir="/Applications" appcleaner
-brew cask install --appdir="/Applications" calibre
-brew cask install --appdir="/Applications" evernote
-brew cask install --appdir="/Applications" shifty
-brew cask install --appdir="/Applications" handbrake
-brew cask install --appdir="/Applications" mpeg-streamclip
-brew cask install --appdir="/Applications" marshallofsound-google-play-music-player
-brew cask install --appdir="/Applications" ffmpeg
-brew cask install phoenix
+brew cask install bettertouchtool
+brew cask install google-chrome
+brew cask install firefox
+brew cask install slack
+brew cask install dropbox
+brew cask install keka
+brew cask install google-backup-and-sync
+brew cask install caffeine 
+brew cask install spotify
+brew cask install appcleaner
+brew cask install calibre
+brew cask install evernote
+brew cask install shifty
+brew cask install handbrake
+brew cask install mpeg-streamclip
+brew cask install ffmpeg
+brew cask install authy
+brew cask install bitwarden
 
 # Remove outdated versions from the cellar.
 brew cleanup

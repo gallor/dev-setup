@@ -80,6 +80,22 @@ function runDots() {
           echo ""
           ./java.sh
       fi
+      if [ $ARG == "devops" ] || [ $ARG == "all" ]; then
+        echo ""
+        echo "------------------------------"
+        echo "Setting up DevOps tools"
+        echo "------------------------------"
+        echo ""
+        ./devops.sh 
+      fi
+      if [ $ARG == "python" ] || [ $ARG == "all" ]; then
+        echo ""
+        echo "------------------------------"
+        echo "Setting up Python tools"
+        echo "------------------------------"
+        echo ""
+        ./python.sh 
+      fi
     done
 
     echo "------------------------------"
@@ -135,7 +151,8 @@ echo "------------------------------"
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 
 	echo "------------------------------"
-	echo "Please choose from the following list: all, osxprep, bootstrap, brew, vim, aws, datastores, web, or java.";
+	echo "Please choose from the following list: all, osxprep, bootstrap, brew, vim, aws,
+  datastores, web, java, devops, or python.";
 	echo "------------------------------"
 	read response
 	echo ""

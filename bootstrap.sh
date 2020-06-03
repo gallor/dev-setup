@@ -5,9 +5,6 @@
 
 
 function doIt() {
-    #rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-    #    --exclude "README.md" --exclude "LICENSE" -avh --no-perms . ~;
-    #source ~/.bashrc;
 	if [[ ! -d ~/dev/git/dotfiles ]]; then
 		FILES="$(ls -la)"
 		for f in $FILES

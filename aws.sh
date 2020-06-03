@@ -27,3 +27,7 @@ brew cask nosql-workbench-for-amazon-dynamodb
 
 brew tap TylerBrock/saw # CW log tailing tool
 brew install saw
+
+pip3 install boto3
+pip3 install botostubs
+pip3 install pyyaml

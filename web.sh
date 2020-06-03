@@ -31,22 +31,22 @@ brew cleanup
 # \curl -sSL https://get.rvm.io | bash -s stable
 
 # Install NVM
-if test ! $(which nvm); then
+if test ! $(nvm which); then
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
     source ~/.bashrc;
 fi
 
-echo "Installing Node 10.15 LTS..."
-nvm install v10.15.1
+echo "Installing Node 12.16 LTS..."
+nvm install v12.16.3
+nvm alias default node
 
-yarn global add jshint
-yarn global add wscat
-yarn global add nodemon
-yarn global add npm-bundle
-yarn global add jest
-yarn global add eslint@^5.3.0
-yarn global add eslint-config-airbnb
-yarn global add eslint-plugin-jsx-a11y@^6.2.3 eslint-plugin-react eslint-plugin-import babel-eslint # support for ES6
+npm i -g jshint
+npm i -g wscat
+npm i -g nodemon
+npm i -g npm-bundle
+npm i -g jest
+npm i -g eslint@^5.3.0
+npx install-peerdeps --global eslint-config-airbnb
 
 gem update --system
 
