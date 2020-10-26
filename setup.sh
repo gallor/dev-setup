@@ -81,20 +81,20 @@ function runDots() {
           ./java.sh
       fi
       if [ $ARG == "devops" ] || [ $ARG == "all" ]; then
-        echo ""
-        echo "------------------------------"
-        echo "Setting up DevOps tools"
-        echo "------------------------------"
-        echo ""
-        ./devops.sh 
+          echo ""
+          echo "------------------------------"
+          echo "Setting up DevOps tools"
+          echo "------------------------------"
+          echo ""
+          ./devops.sh 
       fi
       if [ $ARG == "python" ] || [ $ARG == "all" ]; then
-        echo ""
-        echo "------------------------------"
-        echo "Setting up Python tools"
-        echo "------------------------------"
-        echo ""
-        ./python.sh 
+          echo ""
+          echo "------------------------------"
+          echo "Setting up Python tools"
+          echo "------------------------------"
+          echo ""
+          ./python.sh 
       fi
     done
 
@@ -119,7 +119,7 @@ function init() {
 	brew install git
 
 	# Cloning git repositories as I will be symlinking the dotfiles to the desktop so that changes can always be committed easily
-	mkdir -P ~/dev/{js,java,python,git,lib}/workspace
+	mkdir -P ~/dev/{js,java,python,git,lib}
     mkdir ~/dev/java/lib
 	cd ~/dev/git 
 	git clone https://github.com/gallor/dev-setup.git

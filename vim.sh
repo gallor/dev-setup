@@ -45,12 +45,6 @@ pip3 install --user pynvim
 brew install tmux # terminal multiplexer
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm # tmux plugin manager
 
-# Install Bats for syntax highlighting
-cd ~/dev/git
-git clone https://github.com/sstephenson/bats 
-cd ./bats
-sudo ./install.sh /usr/local
-
 # Get Nerd Font to install for devicons
 cd ~/Library/Fonts && curl -fLo "InconsolataGo Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/InconsolataGo/Regular/complete/InconsolataGo%20Nerd%20Font%20Complete.ttf
 

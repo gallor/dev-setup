@@ -20,3 +20,9 @@ curl -Lo $FILENAME $LOCATION
 unzip $FILENAME
 mv terraform-ls /usr/local/bin/terraform-ls
 rm -rf $FILENAME
+
+brew bundle --verbose --file=- <<-EOF
+			brew "git-crypt"
+			brew "terraform"
+			brew "terragrunt"
+			brew "terraform-docs"

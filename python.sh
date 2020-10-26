@@ -16,3 +16,5 @@ brew install python
 echo ==============================================================================
 echo Make sure to alias the python and pip3 to python3 in alias file
 echo ==============================================================================
+
+brew install pipenv

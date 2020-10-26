@@ -87,8 +87,6 @@ brew install bitwarden-cli # password manager
 # Exhuberant Ctags: universal ctags is not supported with js patterns for new syntax
 brew install ctags-exuberant
 
-brew install bitwarden-cli
-
 # Apps
 brew install dash # Docs
 
@@ -126,6 +124,7 @@ brew cask install fork
 brew cask install virtualbox
 brew cask install docker
 brew cask install proxyman
+brew cask install ngrok
 
 # Misc casks
 brew cask install bettertouchtool

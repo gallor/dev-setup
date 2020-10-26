@@ -18,7 +18,7 @@ fi
 # Make sure we’re using the latest Homebrew.
 brew update
 
-brew install yarn
+# brew install yarn
 # brew install go
 # brew install ruby
 # brew install gnupg # for verifying rvm key
@@ -46,14 +46,14 @@ npm i -g nodemon
 npm i -g npm-bundle
 npm i -g jest
 npm i -g eslint@^5.3.0
-npx install-peerdeps --global eslint-config-airbnb
+# npx install-peerdeps --global eslint-config-airbnb
 
 gem update --system
 
 # Install Compass, SCSS and JSON
-gem install compass
-gem install sass
-gem install json
+# gem install compass
+# gem install sass
+# gem install json
 
 # Make nvm directory
 mkdir ~/.nvm
