@@ -5,18 +5,20 @@
 
 
 function doIt() {
-	if [[ ! -d ~/dev/git/dotfiles ]]; then
-		FILES="$(ls -la)"
-		for f in $FILES
-		do
-      if [ -d $(f) ]; then
-        echo "Directory, skipping"
-      else
-        FILE="$(basename $f)"
-        ln -s ${HOME}/dev/git/dotfiles/$FILE ${HOME}/$FILE;
-      fi
-    done
-	fi
+    if [[ -d ~/dev/git/dotfiles ]]; then
+      pushd ~/dev/git/dotfiles
+      FILES="$(ls -a)"
+      echo $FILES
+      for f in $FILES; do
+        if [ -d $f ]; then
+          echo $f
+          echo "Directory, skipping"
+        else
+          ln -s ${HOME}/dev/git/dotfiles/$f ${HOME}/$f;
+        fi
+      done
+      popd
+    fi
 }
 
 function syncNeovimAndRG() {
