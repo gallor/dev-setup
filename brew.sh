@@ -32,7 +32,7 @@ brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+brew install gnu-sed
 # Install Bash 5.
 brew install bash
 brew tap homebrew/versions
@@ -61,7 +61,7 @@ brew install htop-osx # top with extra functionality
 brew install dark-mode # Toggle the OS X Dark Mode from the command-line
 brew install git-lfs # Git Large File Storage
 brew install git-flow # Automate git branching workflow
-brew install imagemagick --with-webp # Image editing
+brew install imagemagick # Image editing
 brew install ssh-copy-id # install your public key in a remote machine's authorized_keys
 brew install trash # remove file to trash instead of delete
 brew install webkit2png # Creates screenshots of webpages
@@ -145,6 +145,8 @@ brew cask install mpeg-streamclip
 brew cask install ffmpeg
 brew cask install authy
 brew cask install bitwarden
+brew cask install yt-music
+brew cask install notion
 
 # Remove outdated versions from the cellar.
 brew cleanup
