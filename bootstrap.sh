@@ -25,8 +25,11 @@ function syncNeovimAndRG() {
     if [[ ! -d ~/.config ]]; then
         mkdir -p ~/.config
     fi
-    ln -s ${HOME}/dev/git/nvim ${HOME}/.config/nvim
-    ln -s ${HOME}/dev/git/ripgrep ${HOME}/.config/ripgrep
+    if [[ -d ~/dev/git/dotfiles ]]; then
+        ln -s ${HOME}/dev/git/dotfiles/nvim ${HOME}/.config/nvim
+        ln -s ${HOME}/dev/git/dotfiles/ripgrep ${HOME}/.config/ripgrep
+    fi
+    
 }
 
 
