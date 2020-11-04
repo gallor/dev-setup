@@ -119,7 +119,7 @@ function init() {
 	brew install git
 
 	# Cloning git repositories as I will be symlinking the dotfiles to the desktop so that changes can always be committed easily
-	mkdir -P ~/dev/{js,java,python,git,lib}
+	mkdir -p ~/dev/{js,java,python,git,lib}
     mkdir ~/dev/java/lib
 	cd ~/dev/git 
 	git clone https://github.com/gallor/dev-setup.git
